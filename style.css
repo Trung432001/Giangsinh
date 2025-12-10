@@ -1,0 +1,34 @@
+.treeStar {
+    animation: pulse 2.4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+.treeBottomPath {
+    stroke-linecap: round;
+    stroke: url(#runnerGrad);
+    stroke-width: 10;
+    stroke-dasharray: 80 1000;
+    stroke-dashoffset: 1000;
+    animation: dashMove 3s ease-in-out infinite;
+}
+
+@keyframes dashMove {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: -1000;
+    }
+}
